@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spot_detection"
+version = "0.1.0"
+description = "Spot detection utilities for multi-channel TIFF microscopy images"
+readme = "README.md"
+requires-python = ">=3.13"
+authors = [
+  { name = "Sharon" }
+]
+dependencies = [
+  "numpy>=1.24",
+  "scikit-image>=0.22",
+  "matplotlib>=3.8",
+  "tifffile>=2024.2"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["spot_detection*"]
